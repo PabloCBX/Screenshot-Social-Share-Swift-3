@@ -5,7 +5,7 @@ func shareScreenshot(){
         let imageCap = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        UIImageWriteToSavedPhotosAlbum(imageCap!, nil, nil, nil)
+        //UIImageWriteToSavedPhotosAlbum(imageCap!, nil, nil, nil) -> OPTIONAL SAVE IMAGE 
         
         let shareImg: UIActivityViewController = UIActivityViewController(activityItems: [(imageCap!)], applicationActivities: nil)
         self.present(shareImg, animated: true, completion: nil)
